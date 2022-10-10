@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="255dp">
+
+    <ImageView
+        android:id="@+id/rvMovies"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:background="#6A009688" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="#52151313"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/rvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#F6F2F2"
+        app:layout_constraintBottom_toTopOf="@id/rvRating"
+        app:layout_constraintStart_toStartOf="@id/rvRating"
+        />
+
+    <TextView
+        android:id="@+id/rvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:textColor="#F6F2F2"
+        app:layout_constraintBottom_toBottomOf="@id/rvTitle"
+        app:layout_constraintStart_toEndOf="@id/rvTitle"
+        app:layout_constraintTop_toTopOf="@id/rvTitle" />
+    
+    <RatingBar
+        android:id="@+id/rvRating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:rating="3"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="31dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

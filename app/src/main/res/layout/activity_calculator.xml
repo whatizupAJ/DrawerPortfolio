@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="15%"
+        app:layout_constraintEnd_toEndOf="@+id/tvAmountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmountLabel" />
+
+    <TextView
+        android:id="@+id/tiplabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="tip"
+        app:layout_constraintEnd_toEndOf="@+id/percentage"
+        app:layout_constraintTop_toBottomOf="@+id/percentage" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="total"
+        app:layout_constraintEnd_toEndOf="@+id/tiplabel"
+        app:layout_constraintTop_toBottomOf="@+id/tiplabel" />
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tiplabel"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toTopOf="@+id/tiplabel" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAmountLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvAmountLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvAmountLabel" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/total"
+        app:layout_constraintStart_toEndOf="@+id/tiplabel"
+        app:layout_constraintTop_toBottomOf="@+id/tips" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="30"
+        android:progress="15"
+        app:layout_constraintBottom_toBottomOf="@+id/percentage"
+        app:layout_constraintStart_toStartOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/tipdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="3dp"
+        android:text="Description"
+        app:layout_constraintEnd_toEndOf="@+id/total"
+        app:layout_constraintTop_toBottomOf="@+id/total" />
+
+    <TextView
+        android:id="@+id/tipdesclabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tipdesc"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/tipdesc"
+        tools:layout_editor_absoluteX="120dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

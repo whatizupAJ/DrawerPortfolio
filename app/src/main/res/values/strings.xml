@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Portfolio</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="email_hint">email</string>
+    <string name="password_hint">password</string>
+    <string name="login_button">Login</string>
+    //<string name="user_email"></string>
+</resources>
